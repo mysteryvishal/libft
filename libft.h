@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 05:19:57 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/24 05:42:04 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n);
 // memchr
 // memcmp
 char	*ft_strnstr(char *big, char *little, int len);
-// atoi
+int	ft_atoi(const char *str)
 // calloc
 // strdup
 
