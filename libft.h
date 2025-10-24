@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 14:01:01 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/24 15:19:11 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_isascii(int arg);
 int	ft_isprint(int c);
 int	ft_strlen(char *str);
 void	*ft_memset(void *str, int c, size_t n);
-// bzero
+void    ft_bzero(void *dst, size_t n);
 // memcpy
 // memmove
 size_t  ft_strlcpy(char *dst, const char *src, size_t size);
@@ -33,7 +33,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n);
 // memchr
 // memcmp
 char	*ft_strnstr(char *big, char *little, int len);
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str);
 // calloc
 // strdup
 
