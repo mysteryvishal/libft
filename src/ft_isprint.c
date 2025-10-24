@@ -6,11 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:21:04 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/22 16:22:24 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/23 18:44:29 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
