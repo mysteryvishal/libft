@@ -6,13 +6,13 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:06:12 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/22 16:07:43 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/23 18:42:32 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int arg)
 {
-	if (c >= '0' && c <= '9')
+	if (arg >= '0' && arg <= '9')
 		return (1);
 	else
 		return (0);
