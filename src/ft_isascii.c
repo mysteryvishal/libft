@@ -6,14 +6,13 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:16:11 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/22 16:20:36 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/23 18:43:29 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+int	ft_isascii(int arg)
 {
-	if (c >= 0 && c <= 127)
+	if (arg >= 0 && arg <= 127)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
