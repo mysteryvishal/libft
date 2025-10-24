@@ -6,25 +6,25 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/23 12:39:28 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/24 03:20:48 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H_
-#define LIBFT_H_
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int	ft_isalpha(char c);
-int	ft_isdigit(char c);
-// isalnum
-int	ft_isascii(int c);
-int	ft_isprint(char c);
+int	ft_isalpha(int arg);
+int	ft_isdigit(int arg);
+int	ft_isalnum(int arg);
+int	ft_isascii(int arg);
+int	ft_isprint(int c);
 int	ft_strlen(char *str);
 // memset
 // bzero
 // memcpy
 // memmove
 // strlcpy
-// strlcat
+unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 char	ft_toupper(char c);
 char	ft_tolower(char c);
 // strchr
