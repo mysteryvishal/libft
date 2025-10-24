@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 15:19:11 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/24 15:37:52 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	ft_tolower(char c);
 // strrchr
 int	ft_strncmp(char *s1, char *s2, unsigned int n);
 // memchr
-// memcmp
+int	ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(char *big, char *little, int len);
 int	ft_atoi(const char *str);
 // calloc
