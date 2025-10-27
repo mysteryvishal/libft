@@ -6,13 +6,15 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:08:03 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/22 16:36:51 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:08:42 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (str[len] != '\0')
