@@ -6,11 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:15:58 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:45:24 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:16:19 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(char *big, char *little, int len)
 {

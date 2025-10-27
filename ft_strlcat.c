@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:30:16 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:46:52 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:18:33 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,7 @@
 //	- NUL-terminates the result
 // 	- returns the length of src.
 
-#include <stddef.h>
-
-static int	ft_strlen(char *str)
-{
-	int	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

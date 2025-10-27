@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:49:51 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:20:34 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,7 @@
 //      - different to memcpy as memmove copies to immediate buffer first.
 // 	- memcpy leads to problems where strings overlap.
 
-#include <stddef.h>
-
-static void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
-{
-	unsigned char	*to;
-	unsigned char	*from;
-	size_t			i;
-
-	to = (unsigned char *) dest_str;
-	from = (unsigned char *) src_str;
-	i = 0;
-	while (i < n)
-	{
-		to[i] = from[i];
-		i++;
-	}
-	return (to);
-}
+#include "libft.h"
 
 void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
 {

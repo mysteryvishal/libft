@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:48:56 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:08:45 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:20:07 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,7 @@
 // 	duplicates a string and returns a pointer to the duplicated string. 
 // 	- duplicated string is a null-terminated byte string
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <bsd/string.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 void	*ft_strdup(const char *s)
 {
@@ -49,6 +35,9 @@ void	*ft_strdup(const char *s)
 	return (s2);
 }
 /*
+#include <bsd/string.h>
+#include <stdio.h>
+
 int	main(void)
 {
 	const char *s1 = "String";
