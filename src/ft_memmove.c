@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 16:44:07 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:49:51 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ static void	*ft_memcpy(void *dest_str, const void *src_str, size_t n)
 {
 	unsigned char	*to;
 	unsigned char	*from;
-	size_t	i;
-	
+	size_t			i;
+
 	to = (unsigned char *) dest_str;
 	from = (unsigned char *) src_str;
-	i = 0; 
+	i = 0;
 	while (i < n)
 	{
 		to[i] = from[i];

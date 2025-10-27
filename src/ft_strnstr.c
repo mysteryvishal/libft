@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:15:58 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/23 12:18:01 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:45:24 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,9 @@ char	*ft_strnstr(char *big, char *little, int len)
 	return (NULL);
 }
 
+/*
 #include <stdio.h>
+
 int	main(void)
 {
 	char	find[] = "body";
@@ -42,4 +44,4 @@ int	main(void)
 
 	printf("test1: %s\nfound: %s\n", test1, ft_strnstr(test1, find, 20));
 	return (0);
-}
+}*/
