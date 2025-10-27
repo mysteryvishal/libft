@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:42:42 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:17:06 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:28:01 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 // 
 // 	nitems: number of elements to be allocated
 // 	size: size of each element
-
 
 #include "libft.h"
 
