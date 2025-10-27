@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:10 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/25 00:29:11 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:47:24 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 // 	- returns the first occurance of the character in the string.
 
 #include <stddef.h>
+
 char	*ft_strchr(const char *str, int search_str)
 {
 	int	i;

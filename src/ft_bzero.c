@@ -6,23 +6,25 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:42:36 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 15:18:38 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:53:20 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // bzero:
-// 	fills the first n bytes of the object pointed to by dst with zero (NUL) bytes.
+// 	fills the first n bytes of the object pointed to by dst with zero 
+// 	(NUL) bytes.
 
 #include <stddef.h>
-void    ft_bzero(void *dst, size_t n)
-{
-    size_t  i;
-    unsigned char   *dest;
 
-    dest = (unsigned char *) dst;
-    i = 0;
-    while (i < n)
-        dest[i++] = 0;
+void	ft_bzero(void *dst, size_t n)
+{
+	unsigned char	*dest;
+	size_t			i;
+
+	dest = (unsigned char *) dst;
+	i = 0;
+	while (i < n)
+		dest[i++] = 0;
 }
 /*
 #include <stdio.h>

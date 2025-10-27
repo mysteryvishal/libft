@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:30:16 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 05:19:33 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:46:52 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 static int	ft_strlen(char *str)
 {
 	int	len;
-	
+
 	len = 0;
 	while (str[len] != '\0')
 		len++;

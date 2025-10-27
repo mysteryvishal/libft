@@ -6,20 +6,20 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:08 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 11:30:58 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 15:49:06 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // memset:
-// 	used to fill a block of memory with a particular value.
-// 	
+// 	used to fill a block of memory with a particular value. 	
 
 #include <stddef.h>
+
 void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned char ch;
-	unsigned char *string;
-	size_t	i;
+	unsigned char	ch;
+	unsigned char	*string;
+	size_t			i;
 
 	i = 0;
 	ch = (unsigned char) c;
