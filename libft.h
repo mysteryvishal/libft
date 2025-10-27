@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 16:19:45 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:11:23 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(char *big, char *little, int len);
 int	ft_atoi(const char *str);
 void	*ft_calloc(size_t nitems, size_t size);
-// strdup
+void	*ft_strdup(const char *s);
 
 #endif
