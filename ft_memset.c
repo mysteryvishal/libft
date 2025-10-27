@@ -6,14 +6,14 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:08 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:49:06 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:20:20 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // memset:
 // 	used to fill a block of memory with a particular value. 	
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {

@@ -6,14 +6,14 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:42:59 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:44:26 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:20:59 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // memchr:
 //  searches for the first occurance of c in first n bytes pointed to by str
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {

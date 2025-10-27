@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:42:36 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:53:20 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:16:59 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 // 	fills the first n bytes of the object pointed to by dst with zero 
 // 	(NUL) bytes.
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *dst, size_t n)
 {

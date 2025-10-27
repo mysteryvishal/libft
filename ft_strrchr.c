@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:28 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 13:57:27 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:17:38 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // 	- returns a pointer to the located character.
 //	- if the character is not found, returns NULL
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

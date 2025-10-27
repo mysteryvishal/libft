@@ -6,16 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:22:15 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 05:40:40 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:21:21 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_isdigit(const int arg)
-{
-	if (arg >= '0' && arg <= '9')
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

@@ -6,20 +6,21 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:11:23 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:24:38 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
 
 int	ft_isalpha(int arg);
 int	ft_isdigit(int arg);
 int	ft_isalnum(int arg);
 int	ft_isascii(int arg);
 int	ft_isprint(int c);
-int	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 void	*ft_memset(void *str, int c, size_t n);
 void    ft_bzero(void *dst, size_t n);
 void	*ft_memcpy(void *dest_str, const void *src_str, size_t n);

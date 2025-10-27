@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:02 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:48:07 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:24:07 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 // 	- <0 if the first byte that does not match is lower in ptr1 than ptr2
 // 	- >0 if the first byte that does not match is greater in ptr 1 than ptr2
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {

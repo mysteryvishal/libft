@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 03:32:17 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 15:46:26 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:18:22 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 // 	- returns the length of src.
 //
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

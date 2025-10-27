@@ -6,11 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:08:03 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:08:42 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 17:18:11 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {
