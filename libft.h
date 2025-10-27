@@ -6,12 +6,13 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 13:56:52 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:51:26 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stddef.h>
 
 int	ft_isalpha(int arg);
 int	ft_isdigit(int arg);
@@ -30,7 +31,7 @@ char	ft_tolower(char c);
 char    *ft_strchr(const char *str, int search_str);
 char	*ft_strrchr(const char *str, int c);
 int	ft_strncmp(char *s1, char *s2, unsigned int n);
-// memchr
+void    *ft_memchr(const void *str, int c, size_t n);
 int	ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(char *big, char *little, int len);
 int	ft_atoi(const char *str);
