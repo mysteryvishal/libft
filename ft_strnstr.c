@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:15:58 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 18:36:09 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/29 16:17:48 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, int len)
 		while (big[i + j] == little[j])
 		{
 			if (little[j] == '\0')
-				return (&big[i]);
+				return ((char *)&big[i]);
 			j++;
 		}
 		i++;
