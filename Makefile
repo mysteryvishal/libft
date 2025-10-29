@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/10/27 18:45:36 by vmistry          ###   ########.fr        #
+#    Updated: 2025/10/29 16:20:35 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,31 +36,8 @@ SRC := ft_isalpha \
 	ft_strnstr \
 	ft_atoi \
 	ft_calloc \
-	ft_strdup \
-	ft_substr
-
-SRCS = $(addsuffix .c, $(SRC))
-OBJS = $(addsuffix .o, $(SRC))
-
-%.o : %.c
-	$(SRCS)
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(NAME): $(OBJS)
-	$(AR) %@ $^
-
-all: $(NAME)
-
-clean: 
-	rm -f *.o
-
-fclean: clean
-	rm -f $(NAME)
-
-re: clean all
-
-.PHONY: all clean fclean re
-
+	ft_strdup
+# 	ft_substr \
 # 	ft_strjoin \
 # 	ft_strtrim \
 # 	ft_split \
@@ -80,3 +57,26 @@ re: clean all
 # 	ft_lstclear \
 # 	ft_lstiter \
 # 	ft_lstmap 
+
+SRCS = $(addsuffix .c, $(SRC))
+OBJS = $(addsuffix .o, $(SRC))
+
+%.o : %.c
+# 	$(SRCS)
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+$(NAME): $(OBJS)
+	$(AR) $@ $^
+
+all: $(NAME)
+
+clean: 
+	rm -f *.o
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
+
