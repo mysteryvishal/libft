@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/29 16:18:56 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/10/29 16:40:39 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 
+// Part 1
 int		ft_isalpha(int arg);
 int		ft_isdigit(int arg);
 int		ft_isalnum(int arg);
@@ -38,5 +39,8 @@ void	ft_bzero(void *dst, size_t n);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+// Part 2
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
