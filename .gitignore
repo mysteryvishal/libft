@@ -1,4 +1,10 @@
+# Settings folders
 .vscode
+
+# PDF files
 *.pdf
+
+# Compiled object files
 *.o
 *.out
+*.pch
