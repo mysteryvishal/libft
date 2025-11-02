@@ -8,3 +8,6 @@
 *.o
 *.out
 *.pch
+
+# folders
+tests/
