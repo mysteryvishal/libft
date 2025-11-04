@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:13:41 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/02 02:04:21 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/04 16:31:11 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static unsigned int	ft_digits(int n)
 {
 	unsigned int	size;
 	unsigned int	num;
-	
+
 	if (n == 0)
 		return (1);
 	num = (unsigned int) n;
