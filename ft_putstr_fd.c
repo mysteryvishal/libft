@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 15:48:48 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/04 15:51:36 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/04 16:00:20 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while(*s)
-	{
-		write(fd, s, 1);
-		s++;
-	}
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }
 /*
 int	main(void)
