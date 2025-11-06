@@ -6,18 +6,18 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:02:26 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/06 22:29:30 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 23:18:34 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(char c)
+int	ft_toupper(int ch)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
+	if (ch >= 'a' && ch <= 'z')
+		return (ch - 32);
 	else
-		return (c);
+		return (ch);
 }
 
 /*
