@@ -6,9 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:02:26 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/22 16:40:14 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 22:29:30 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	ft_toupper(char c)
 {

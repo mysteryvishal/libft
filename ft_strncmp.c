@@ -6,9 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:23:54 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/22 16:35:04 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 22:29:17 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

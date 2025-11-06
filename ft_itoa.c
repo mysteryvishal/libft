@@ -6,13 +6,11 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:13:41 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/04 16:31:11 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 22:28:47 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <limits.h>
 
 static unsigned int	ft_digits(int n)
 {
@@ -60,6 +58,8 @@ char	*ft_itoa(int n)
 	return (res);
 }
 
+// #include <stdio.h>
+// #include <limits.h>
 // int	main(void)
 // {
 // 	int	n = INT_MIN;
