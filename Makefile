@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/10/29 16:20:35 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/06 22:31:33 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,18 +36,19 @@ SRC := ft_isalpha \
 	ft_strnstr \
 	ft_atoi \
 	ft_calloc \
-	ft_strdup
-# 	ft_substr \
-# 	ft_strjoin \
-# 	ft_strtrim \
-# 	ft_split \
-# 	ft_itoa \
-# 	ft_strmapi \
-# 	ft_striteri \
-# 	ft_putchar_fd \
-# 	ft_putstr_fd \
-# 	ft_putendl_fd \
-# 	ft_putnbr_fd
+	ft_strdup \
+	ft_substr \
+	ft_strjoin \
+	ft_strtrim \
+	ft_split \
+	ft_itoa \
+	ft_strmapi \
+	ft_striteri \
+	ft_putchar_fd \
+	ft_putstr_fd \
+	ft_putendl_fd \
+	ft_putnbr_fd \
+
 # BONUS_SRC = ft_lstnew \
 # 	ft_lstadd_front \
 # 	ft_lstsize \
