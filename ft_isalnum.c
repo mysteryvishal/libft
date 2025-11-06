@@ -6,11 +6,13 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:37:09 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/24 05:42:48 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 22:36:28 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	if ((c >= 'A' && c <= 'Z')
 		|| (c >= 'a' && c <= 'z')
