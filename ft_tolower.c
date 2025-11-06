@@ -6,18 +6,18 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:05:20 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/06 22:31:26 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 23:20:06 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_tolower(char c)
+int	ft_tolower(int ch)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+	if (ch >= 'A' && ch <= 'Z')
+		return (ch + 32);
 	else
-		return (c);
+		return (ch);
 }
 /*
 #include <stdio.h>

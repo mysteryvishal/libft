@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/04 16:04:17 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/06 23:20:48 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int		ft_isprint(int c);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 int		ft_atoi(const char *str);
-char	ft_toupper(char c);
-char	ft_tolower(char c);
+int		ft_toupper(int ch);
+int		ft_tolower(int ch);
 char	*ft_strchr(const char *str, int search_str);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *big, const char *little, int len);
