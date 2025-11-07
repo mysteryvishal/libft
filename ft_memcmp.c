@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:02 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:24:07 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/07 02:03:08 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	unsigned char	*p2;
 	size_t			i;
 
+	if (n == 0)
+		return (0);
 	p1 = (unsigned char *) str1;
 	p2 = (unsigned char *) str2;
 	i = 0;
@@ -33,6 +35,8 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 			return (p1[i] - p2[i]);
 		i++;
 	}
+	if (i == n)
+		return (0);
 	return (p1[i] - p2[i]);
 }
 /*
