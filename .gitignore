@@ -3,6 +3,8 @@
 
 # PDF files
 *.pdf
+*.md
+!README.md
 
 # Compiled object files
 *.o
