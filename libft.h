@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/07 19:03:22 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/07 19:46:59 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strnstr(const char *big, const char *little, int len);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_calloc(size_t nitems, size_t size);
 void	*ft_strdup(const char *s);
-void	*ft_memcpy(void *dest_str, const void *src_str, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes);
 void	*ft_memchr(const void *str, int c, size_t n);
 void	ft_bzero(void *dst, size_t n);
