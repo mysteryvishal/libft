@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:03:52 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/04 16:07:26 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/07 02:26:15 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,29 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num;
+	unsigned int	num;
+	char	ch;
 
-	num = ft_itoa(n);
-	if (!n)
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
 		return ;
-	write(fd, num, ft_strlen(num));
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		num = (unsigned int)(-n);
+	}
+	else
+		num = (unsigned int)(n);
+	if (num >= 10)
+		ft_putnbr_fd((num / 10), fd);
+	ch = (num % 10) + '0';
+	ft_putchar_fd(ch, fd);
 }
 /*
 int	main(void)
 {
-	ft_putnbr_fd(728, 1);
+	ft_putnbr_fd(0, 1);
 	return (0);
 }*/
