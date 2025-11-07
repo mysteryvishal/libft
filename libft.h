@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 12:21:46 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/06 23:20:48 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/07 01:54:58 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_isdigit(int arg);
 int		ft_isalnum(int arg);
 int		ft_isascii(int arg);
 int		ft_isprint(int c);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_toupper(int ch);
