@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:08 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:20:20 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/07 19:02:35 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "libft.h"
 
-void	*ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	ch;
 	unsigned char	*string;
@@ -23,12 +23,9 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	i = 0;
 	ch = (unsigned char) c;
-	string = (unsigned char *) str;
-	while (string[i] != '\0' && i < n)
-	{
-		string[i] = ch;
-		i++;
-	}
+	string = (unsigned char *) s;
+	while (i < n)
+		string[i++] = ch;
 	return (string);
 }
 
@@ -37,20 +34,21 @@ void	*ft_memset(void *str, int c, size_t n)
 #include <string.h>
 int	main(void)
 {
-	char str1[50];
-	char str2[50];
+	char	str1[2];
+	char	str2[2];
+	int	n = 2;
 
-	strcpy(str1, "Welcome");
-	puts(str1);
+	strcpy(str1, "");
+	strcpy(str2, "");
+	
+	memset(str1, 'A', n);
+	ft_memset(str2, 'A', n);
 
-	memset(str1, '#', 7);
-	puts(str1);
-
-	strcpy(str2, "Welcome");
-	puts(str2);
-
-	memset(str2, '#', 7);
-	puts(str2);
+	printf("OG: %s | FT: %s\n", str1, str2);
+	if (!memcmp(str1, str2, n))
+		printf("memcmp: match\n");
+	else
+		printf("memcmp: different\n");
 	return (0);
 }*/
 /*
