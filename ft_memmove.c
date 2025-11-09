@@ -6,25 +6,34 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:20:34 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/09 17:12:34 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // memmove:
 //      used to copy a block of memory from a location to another.
-//      - different to memcpy as memmove copies to immediate buffer first.
+// 	- different to memcpy as memmove copies to immediate buffer first.
 // 	- memcpy leads to problems where strings overlap.
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest_str, const void *src_str, size_t numBytes)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*buf;
+	unsigned char	*d;
+	const unsigned char	*s;
+	unsigned char	*tmp;
 
-	buf = (unsigned char *) dest_str;
-	ft_memcpy(buf, src_str, numBytes);
-	ft_memcpy(dest_str, buf, numBytes);
-	return (dest_str);
+	if (dst == src || len == 0)
+		return (dst);
+	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
+	tmp = (unsigned char *)malloc(len);
+	if (!tmp)
+		return (dst);
+	ft_memcpy(tmp, s, len);
+	ft_memcpy(d, tmp, len);
+	free(tmp);
+	return (dst);
 }
 
 /*
