@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/11/06 22:31:33 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/10 21:37:02 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,6 @@ SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))
 
 %.o : %.c
-# 	$(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
@@ -79,5 +78,8 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+# so:
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
+# 	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
+.PHONY: all clean fclean re
