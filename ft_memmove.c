@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/09 17:12:34 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 15:00:16 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*d;
 	const unsigned char	*s;
-	unsigned char	*tmp;
+	unsigned char		*d;
+	unsigned char		*tmp;
 
 	if (dst == src || len == 0)
 		return (dst);
