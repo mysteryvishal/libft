@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 16:48:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/10 21:30:58 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 21:35:08 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,12 +63,16 @@ char	*ft_strtrim(const char *s1, const char *set)
 // int	main(void)
 // {
 // 	char	*test1 = ft_strtrim("  abc  ", " ");
-// 	printf("test 1:\n>> out: %s\n>> match: %d\n\n", test1, memcmp(test1, "abc", 3));
+// 	printf("test 1:\n>> out: %s\n>> match: %d\n\n", 
+// 			test1, memcmp(test1, "abc", 3));
 // 	char	*test2 = ft_strtrim("", " ");
-// 	printf("test 2:\n>> out: %s\n>> match: %d\n\n", test2, memcmp(test2, "", ft_strlen("")));
+// 	printf("test 2:\n>> out: %s\n>> match: %d\n\n", 
+// 			test2, memcmp(test2, "", ft_strlen("")));
 // 	char	*test3 = ft_strtrim("    ", " ");
-// 	printf("test 3:\n>> out: %s\n>> match: %d\n\n", test3, memcmp(test3, "", ft_strlen("")));
+// 	printf("test 3:\n>> out: %s\n>> match: %d\n\n", 
+// 			test3, memcmp(test3, "", ft_strlen("")));
 // 	char	*test4 = ft_strtrim("abc", "");
-// 	printf("test 4:\n>> out: %s\n>> match: %d\n\n", test4, memcmp(test4, "abc", 3));
+// 	printf("test 4:\n>> out: %s\n>> match: %d\n\n", 
+// 			test4, memcmp(test4, "abc", 3));
 // 	return (0);
 // }
