@@ -6,26 +6,38 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 17:15:58 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/29 16:17:48 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 17:18:12 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// strnstr:
+// 	find the first occurance where of needle in haystack, within len bytes
+// 	- return pointer in haystack where match begins
+// 	- if needle empty => return haystack
+// 	- if len == 0 or not found => return null
+
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, int len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	if (len == 0 && needle[0] != '\0')
+		return (NULL);
 	i = 0;
-	while (big[i] != '\0' && i < len)
+	while (i < len && haystack[i])
 	{
-		j = 0;
-		while (big[i + j] == little[j])
+		if (haystack[i] == needle[0])
 		{
-			if (little[j] == '\0')
-				return ((char *)&big[i]);
-			j++;
+			j = 0;
+			while (needle[j] && (i + j) < len
+				&& haystack[i + j] == needle[j])
+				j++;
+			if (needle[j] == '\0')
+				return ((char *)(haystack + i));
 		}
 		i++;
 	}
