@@ -6,11 +6,23 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:22:15 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:21:21 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 15:37:43 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	is_space(int arg)
+{
+	if (arg == '\n'
+		|| arg == '\t'
+		|| arg == '\f'
+		|| arg == '\v'
+		|| arg == '\r'
+		|| arg == ' ')
+		return (1);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -19,7 +31,9 @@ int	ft_atoi(const char *str)
 
 	sign = 1;
 	res = 0;
-	while (!ft_isdigit(*str) && *str != '\0')
+	while (*str && is_space(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
 			sign *= -1;
