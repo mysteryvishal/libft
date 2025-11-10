@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:42:42 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:28:01 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 14:47:20 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ void	*ft_calloc(size_t nitems, size_t size)
 {
 	size_t	*arr;
 
-	if (nitems == 0 || size == 0)
-		return (0);
-	arr = malloc (nitems * size);
+	if (size == 0)
+		return (malloc(0));
+	arr = malloc(nitems * size);
 	if (!arr)
 		return (NULL);
-	ft_bzero(arr, nitems);
+	ft_bzero(arr, (nitems * size));
 	return (arr);
 }
 /*
