@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 16:48:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/04 16:30:45 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 21:30:58 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,54 +19,56 @@
 
 static int	ft_isin(const char ch, const char *set)
 {
-	size_t	i;
-
-	i = 0;
-	while (set[i] != '\0')
+	if (!set)
+		return (0);
+	while (*set)
 	{
-		if (ch == set[i])
+		if (ch == *set)
 			return (1);
-		i++;
+		set++;
 	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
+	char	*res;
 	size_t	start;
 	size_t	end;
-	char	*trimed_str;
+	size_t	size;
 
-	start = 0;
-	end = ft_strlen(s1) - 1;
-	if (*s1 == '\0')
+	if (!s1)
 		return (NULL);
-	while (ft_isin(s1[start], set) && ft_isin(s1[start + 1], set))
+	if (!set)
+		return (ft_strdup(s1));
+	start = 0;
+	end = ft_strlen(s1);
+	while (start < end && ft_isin(s1[start], set))
 		start++;
-	while (ft_isin(s1[end], set) && ft_isin(s1[end - 1], set))
+	while (end > start && ft_isin(s1[end - 1], set))
 		end--;
-	trimed_str = (char *)malloc((end - ++start + 1));
-	if (!trimed_str)
+	size = end - start;
+	res = (char *)malloc(size + 1);
+	if (!res)
 		return (0);
-	ft_strlcpy(trimed_str, &s1[start], (end - start + 1));
-	return ((char *)trimed_str);
+	ft_strlcpy(res, s1 + start, size + 1);
+	return (res);
 }
 
 // testing
-/*
-#include <stdio.h>
-int	main(void)
-{
-	const char	*s1 = "  \t\n Hello, World! \n\t  ";
-	const char	*set = " \n\t";
-	char	*result = ft_strtrim(s1, set);
 
-	printf("Result processed: '%s'\n", result);
-	if (result)
-	{
-		printf("Original: '%s'\n", s1);
-		printf("Trimmed: '%s'\n", result);
-		free(result);
-	}
-	return (0);
-}*/
+// #include <stdio.h>
+// #include <string.h>
+
+// int	main(void)
+// {
+// 	char	*test1 = ft_strtrim("  abc  ", " ");
+// 	printf("test 1:\n>> out: %s\n>> match: %d\n\n", test1, memcmp(test1, "abc", 3));
+// 	char	*test2 = ft_strtrim("", " ");
+// 	printf("test 2:\n>> out: %s\n>> match: %d\n\n", test2, memcmp(test2, "", ft_strlen("")));
+// 	char	*test3 = ft_strtrim("    ", " ");
+// 	printf("test 3:\n>> out: %s\n>> match: %d\n\n", test3, memcmp(test3, "", ft_strlen("")));
+// 	char	*test4 = ft_strtrim("abc", "");
+// 	printf("test 4:\n>> out: %s\n>> match: %d\n\n", test4, memcmp(test4, "abc", 3));
+// 	return (0);
+// }
