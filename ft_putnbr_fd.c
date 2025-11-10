@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 16:03:52 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/07 02:26:15 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/10 18:24:42 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
-	char	ch;
+	char			ch;
 
 	if (n == -2147483648)
 	{
