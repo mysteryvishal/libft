@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/11/10 21:37:02 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/11 16:37:52 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ SRC := ft_isalpha \
 	ft_putendl_fd \
 	ft_putnbr_fd \
 
-# BONUS_SRC = ft_lstnew \
+BONUS_SRC = ft_lstnew \
 # 	ft_lstadd_front \
 # 	ft_lstsize \
 # 	ft_lstlast \
@@ -61,17 +61,19 @@ SRC := ft_isalpha \
 
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))
+BONUS_SRCS = $(addsuffix .c, $(BONUS_SRC))
+BONUS_OBJS = $(addsuffix .o, $(BONUS_SRC))
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(BONUS_OBJS)
 	$(AR) $@ $^
 
 all: $(NAME)
 
 clean: 
-	rm -f *.o
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -79,7 +81,7 @@ fclean: clean
 re: fclean all
 
 # so:
-# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS)
-# 	gcc -nostartfiles -shared -o libft.so $(OBJS)
+# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
+# 	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re
