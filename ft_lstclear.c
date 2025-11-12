@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 02:02:28 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/12 03:00:48 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:29:51 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*next;
 
+	if (!lst || !*lst || !del)
+		return ;
 	while (*lst)
 	{
 		next = (*lst)->next;
