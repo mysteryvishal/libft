@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:44:31 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/12 12:00:10 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:07:14 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 #include "libft.h"
 
-static size_t	ft_wordcount(const char *s, char c)
+static size_t	ft_substr_count(const char *s, char c)
 {
 	size_t	count;
 	int		in_sub;
@@ -85,7 +85,7 @@ static size_t	ft_substr_len(const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
-	size_t	nsub;
+	size_t	nsubstr;
 	size_t	i;
 	size_t	substr_len;
 
@@ -96,7 +96,7 @@ char	**ft_split(char const *s, char c)
 	if (!res)
 		return (NULL);
 	i = 0;
-	while (i < nsub)
+	while (i < nsubstr)
 	{
 		while (s && *s == c)
 			s++;
@@ -106,7 +106,7 @@ char	**ft_split(char const *s, char c)
 		s += substr_len;
 		i++;
 	}
-	res[nsub] = NULL;
+	res[nsubstr] = NULL;
 	return (res);
 }
 
@@ -124,7 +124,7 @@ int	main(void)
 		printf("failed: %s\n", *res);
 		return (0);
 	}
-	for (size_t i = 0; i < ft_wordcount(str, del); i++)
+	for (size_t i = 0; i < ft_substr_count(str, del); i++)
 		printf("out_%ld: %s\n", i, res[i]);
 	return (0);
 }*/
