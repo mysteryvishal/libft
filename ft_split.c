@@ -25,7 +25,7 @@ static size_t	ft_wordcount(const char *s, char c)
 
 	count = 0;
 	in_sub = 0;
-	while (s && *s)
+	while (*s)
 	{
 		if (*s != c && in_sub == 0)
 		{
@@ -58,7 +58,7 @@ static int	ft_alloc_copy(char **res, size_t i, char const *s, size_t end)
 {
 	char	*substr;
 
-	if (!s || end <= 0)
+	if (!s || end == 0)
 		return (1);
 	substr = malloc(sizeof(char) * (end + 1));
 	if (!substr)
