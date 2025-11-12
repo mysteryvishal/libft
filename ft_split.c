@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 10:44:31 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/12 11:39:14 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:00:10 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,17 +72,27 @@ static int	ft_alloc_copy(char **res, size_t i, char const *s, size_t end)
 	return (0);
 }
 
+static size_t	ft_substr_len(const char *s, char c)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	return (len);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	size_t	nsub;
 	size_t	i;
-	size_t	end;
+	size_t	substr_len;
 
 	if (!s)
 		return (NULL);
-	nsub = ft_wordcount(s, c);
-	res = malloc(sizeof(char *) * (nsub + 1));
+	nsubstr = ft_substr_count(s, c);
+	res = malloc(sizeof(char *) * (nsubstr + 1));
 	if (!res)
 		return (NULL);
 	i = 0;
@@ -90,12 +100,10 @@ char	**ft_split(char const *s, char c)
 	{
 		while (s && *s == c)
 			s++;
-		end = 0;
-		while (s && s[end] && s[end] != c)
-			end++;
-		if (ft_alloc_copy(res, i, s, end))
+		substr_len = ft_substr_len(s, c);
+		if (ft_alloc_copy(res, i, s, substr_len))
 			return (NULL);
-		s += end;
+		s += substr_len;
 		i++;
 	}
 	res[nsub] = NULL;
