@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 02:33:45 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/12 03:53:33 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 09:12:52 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&res, node);
 		lst = lst->next;
 	}
-	return(res);
+	return (res);
 }
