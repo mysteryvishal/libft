@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/11/12 02:35:03 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/12 03:12:45 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ BONUS_SRC = ft_lstnew \
 	ft_lstdelone \
 	ft_lstclear \
 	ft_lstiter \
-# 	ft_lstmap 
+	ft_lstmap 
 
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))
@@ -79,9 +79,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-# so:
-# 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
-# 	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all clean fclean re
