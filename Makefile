@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/11/12 02:00:06 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/12 02:04:07 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ BONUS_SRC = ft_lstnew \
 	ft_lstlast \
 	ft_lstadd_back \
 	ft_lstdelone \
-# 	ft_lstclear \
+	ft_lstclear \
 # 	ft_lstiter \
 # 	ft_lstmap 
 
