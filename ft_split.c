@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 22:40:25 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/31 15:12:41 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 09:34:21 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	ft_numsub(const char *s, char c)
 }
 
 // allocate and copy substring to result array
-static char	*alloc_and_copy(const char *s, size_t start, size_t end)
+static char	*ft_alloc_copy(const char *s, size_t start, size_t end)
 {
 	char	*res;
 
@@ -53,6 +53,21 @@ static char	*alloc_and_copy(const char *s, size_t start, size_t end)
 	ft_memcpy(res, s + start, end - start);
 	res[end - start] = '\0';
 	return (res);
+}
+
+static void	ft_freeall(char **res, size_t n)
+{
+	size_t	i;
+
+	if (!res)
+		return ;
+	i = 0;
+	while (i < n)
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
 }
 
 char	**ft_split(char const *s, char c)
@@ -76,7 +91,12 @@ char	**ft_split(char const *s, char c)
 		end = 0;
 		while (s && s[end] && s[end] != c)
 			end++;
-		res[i] = alloc_and_copy(s, 0, end);
+		res[i] = ft_alloc_copy(s, 0, end);
+		if (!res[i])
+		{
+			ft_freeall(res, i);
+			return (NULL);
+		}
 		s += end;
 		i++;
 	}
