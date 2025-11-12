@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 00:36:04 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/12 00:54:59 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 02:58:39 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	count;
+	int		count;
 	t_list	*cursor;
 
 	count = 0;
 	cursor = lst;
-	while(cursor != NULL)
+	while (cursor != NULL)
 	{
 		cursor = cursor->next;
 		count++;

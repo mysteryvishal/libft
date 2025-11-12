@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 01:16:29 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/12 01:37:39 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/12 02:59:42 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *last;
+	t_list	*last;
 
 	last = ft_lstlast(*lst);
 	if (!last)
