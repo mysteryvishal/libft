@@ -50,7 +50,7 @@ SRC := ft_isalpha \
 	ft_putnbr_fd \
 
 BONUS_SRC = ft_lstnew \
-# 	ft_lstadd_front \
+	ft_lstadd_front \
 # 	ft_lstsize \
 # 	ft_lstlast \
 # 	ft_lstadd_back \
