@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:22:15 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/10 15:37:43 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/13 04:12:48 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 static int	is_space(int arg)
 {
-	if (arg == '\n'
-		|| arg == '\t'
-		|| arg == '\f'
-		|| arg == '\v'
-		|| arg == '\r'
-		|| arg == ' ')
+	if ((arg >= 9 && arg <= 13) || arg == ' ')
 		return (1);
 	return (0);
 }
