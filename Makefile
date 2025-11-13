@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/11/12 03:12:45 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/13 12:47:19 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,8 +67,11 @@ BONUS_OBJS = $(addsuffix .o, $(BONUS_SRC))
 %.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME): $(OBJS) $(BONUS_OBJS)
+$(NAME): $(OBJS)
 	$(AR) $@ $^
+
+bonus: $(NAME) $(BONUS_OBJS)
+	$(AR) $(NAME) $(BONUS_OBJS)
 
 all: $(NAME)
 
