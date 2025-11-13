@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 16:26:54 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/10 20:16:14 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/13 22:51:48 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		substr = malloc(sizeof(char) * 1);
-		substr[0] = '\0';
-		return (substr);
-	}
-	substr = malloc(sizeof(char) * (len + 1));
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	substr = ft_calloc((len + 1), sizeof(char));
 	if (!substr)
 		return (NULL);
 	ft_strlcpy(substr, s + start, (len + 1));
