@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:10 by vmistry           #+#    #+#             */
-/*   Updated: 2025/10/27 17:20:15 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/13 21:01:17 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,21 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int search_str)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	ch;
 
 	i = 0;
-	while (str[i] != '\0')
+	ch = (char) c;
+	while (s[i] != '\0')
 	{
-		if (str[i] == search_str)
-			return ((char *) &str[i]);
+		if (s[i] == ch)
+			return ((char *)s + i);
 		i++;
 	}
-	if (str[i] == (char) search_str)
-		return ((char *) &str[i]);
+	if (!ch && s[i] == '\0')
+		return ((char *)s + i);
 	return (NULL);
 }
 /*
