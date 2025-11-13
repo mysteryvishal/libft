@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:48:56 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/13 11:46:18 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/13 12:04:00 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strdup(const char *s)
 		i++;
 	}
 	s2[i] = '\0';
-	return (char *)(s2);
+	return ((char *)(s2));
 }
 /*
 #include <bsd/string.h>
