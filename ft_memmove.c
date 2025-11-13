@@ -6,13 +6,12 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 05:43:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/10 15:00:16 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/13 03:05:37 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // memmove:
 //      used to copy a block of memory from a location to another.
-// 	- different to memcpy as memmove copies to immediate buffer first.
 // 	- memcpy leads to problems where strings overlap.
 
 #include "libft.h"
@@ -21,18 +20,21 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	const unsigned char	*s;
 	unsigned char		*d;
-	unsigned char		*tmp;
 
 	if (dst == src || len == 0)
 		return (dst);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
-	tmp = (unsigned char *)malloc(len);
-	if (!tmp)
-		return (dst);
-	ft_memcpy(tmp, s, len);
-	ft_memcpy(d, tmp, len);
-	free(tmp);
+	if (d < s)
+		while (len--)
+			*d++ = *s++;
+	else
+	{
+		d += len - 1;
+		s += len - 1;
+		while (len--)
+			*d-- = *s--;
+	}
 	return (dst);
 }
 
