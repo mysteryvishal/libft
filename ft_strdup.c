@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:48:56 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/06 23:34:13 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/13 11:46:18 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "libft.h"
 
-void	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*s2;
 	size_t	len;
@@ -33,7 +33,7 @@ void	*ft_strdup(const char *s)
 		i++;
 	}
 	s2[i] = '\0';
-	return (s2);
+	return (char *)(s2);
 }
 /*
 #include <bsd/string.h>
