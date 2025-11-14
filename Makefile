@@ -6,7 +6,7 @@
 #    By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/23 18:03:41 by vmistry           #+#    #+#              #
-#    Updated: 2025/11/13 12:47:19 by vmistry          ###   ########.fr        #
+#    Updated: 2025/11/14 09:55:35 by vmistry          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,16 +64,16 @@ OBJS = $(addsuffix .o, $(SRC))
 BONUS_SRCS = $(addsuffix .c, $(BONUS_SRC))
 BONUS_OBJS = $(addsuffix .o, $(BONUS_SRC))
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 
+%.o : %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
 bonus: $(NAME) $(BONUS_OBJS)
 	$(AR) $(NAME) $(BONUS_OBJS)
-
-all: $(NAME)
 
 clean: 
 	rm -f $(OBJS) $(BONUS_OBJS)
@@ -83,4 +83,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
