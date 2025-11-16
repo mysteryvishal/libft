@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:30:16 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/06 23:27:45 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/16 10:57:03 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (dst_len + src_len);
 	while (dst[dst_len] && dst_len < size)
 		dst_len++;
-	if (dst_len == size)
+	if (dst_len >= size)
 		return (size + src_len);
 	while (src[i] && dst_len + i < size - 1)
 	{
