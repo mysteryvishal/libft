@@ -6,7 +6,7 @@
 /*   By: vmistry <vmistry@student.42london.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 16:48:06 by vmistry           #+#    #+#             */
-/*   Updated: 2025/11/10 21:35:08 by vmistry          ###   ########.fr       */
+/*   Updated: 2025/11/14 12:32:52 by vmistry          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size = end - start;
 	res = (char *)malloc(size + 1);
 	if (!res)
-		return (0);
+		return (NULL);
 	ft_strlcpy(res, s1 + start, size + 1);
 	return (res);
 }
