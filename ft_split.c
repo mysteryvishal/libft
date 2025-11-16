@@ -59,7 +59,10 @@ static int	ft_fill_substr(char **res, size_t i, char const *s, size_t end)
 	char	*substr;
 
 	if (!s || end == 0)
+	{
+		ft_freeall(res, i);
 		return (1);
+	}
 	substr = malloc(sizeof(char) * (end + 1));
 	if (!substr)
 	{
